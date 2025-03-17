@@ -3,9 +3,11 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>task04-group</groupId>
     <artifactId>task04</artifactId>
     <version>1.0.0</version>
+
     <properties>
         <maven-shade-plugin.version>3.5.2</maven-shade-plugin.version>
         <syndicate.java.plugin.version>1.15.0</syndicate.java.plugin.version>
@@ -15,6 +17,7 @@
         <src.dir>jsrc/main/java</src.dir>
         <resources.dir>jsrc/main/resources</resources.dir>
     </properties>
+
     <dependencies>
         <!-- AWS dependencies-->
         <dependency>
@@ -29,13 +32,14 @@
             <version>${syndicate.java.plugin.version}</version>
         </dependency>
     </dependencies>
+
     <build>
         <sourceDirectory>${src.dir}</sourceDirectory>
         <resources>
             <resource>
                 <directory>${resources.dir}</directory>
             </resource>
-        </resources>
+        </resources>        
         <plugins>
             <plugin>
                 <groupId>net.sf.aws-syndicate</groupId>
@@ -87,4 +91,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
